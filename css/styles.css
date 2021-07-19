@@ -6,6 +6,7 @@ html, body, main, nav, ul, li {
 main {
   width: 400px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
  img {
@@ -18,11 +19,31 @@ ul {
 
 #main {
   width: 400px;
-  height: 400px;;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 nav li {
   border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav li:hover {
+  background: #f8f8f8;
 }
 
 #play {
