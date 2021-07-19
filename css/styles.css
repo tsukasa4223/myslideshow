@@ -43,7 +43,7 @@ nav li {
 }
 
 nav li:hover {
-  background: #f8f8f8;
+  background: #dcdcdc;
 }
 
 #play {
@@ -55,6 +55,22 @@ nav li:hover {
   width: 80px;
 }
 
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  gap: 5px;
+}
+
+.thumbnails li {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.thumbnails li:hover,
+.thumbnails li.current {
+  opacity: 1;
+}
+
 .thumbnails img {
-  width: 60px;
+  width: 75px;
 }
