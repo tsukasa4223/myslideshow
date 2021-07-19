@@ -18,4 +18,16 @@
   const mainImage = document.getElementById('main');
   // imagesのcurrentIndex番目の要素を代入
   mainImage.src = images[currentIndex];
+
+  // サムネイル画像の設定
+  images.forEach(image => {
+    const img = document.createElement('img');
+    img.src = image;
+
+    // liの子要素としてimgを追加
+    const li = document.createElement('li');
+    li.appendChild(img);
+    // thumbnailsクラスがついたulの子要素としてliを追加
+    document.querySelector('.thumbnails').appendChild(li);
+  });
 }
