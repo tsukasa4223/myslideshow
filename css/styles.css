@@ -1,0 +1,18 @@
+html, body, main, nav, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#main {
+  width: 400px;
+  height: 400px;;
+}
+
+.thumbnails img {
+  width: 60px;
+}
