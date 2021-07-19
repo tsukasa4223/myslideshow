@@ -8,9 +8,30 @@ main {
   margin: 0 auto;
 }
 
+ img {
+   vertical-align: bottom;
+ }
+
+ul {
+  list-style-type: none;
+}
+
 #main {
   width: 400px;
   height: 400px;;
+}
+
+nav li {
+  border: 1px solid #ddd;
+}
+
+#play {
+  width: 160px;
+}
+
+#prev,
+#next {
+  width: 80px;
 }
 
 .thumbnails img {
