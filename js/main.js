@@ -65,4 +65,17 @@
     }
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
+
+  // playをクリックした時の処理(関数)
+  function playSlideshow() {
+    setTimeout(() => {
+      next.click();
+      playSlideshow();
+    }, 1500);
+  }
+
+  const play = document.getElementById('play');
+  play.addEventListener('click', () => {
+    playSlideshow();
+  });
 }
