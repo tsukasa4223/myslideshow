@@ -66,16 +66,29 @@
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
 
+  let timeoutId;
+
   // playをクリックした時の処理(関数)
   function playSlideshow() {
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
       next.click();
       playSlideshow();
     }, 1500);
   }
 
+  let isPlaying = false;
+
   const play = document.getElementById('play');
   play.addEventListener('click', () => {
-    playSlideshow();
+    // スライドショーを再生したあとに停止をする処理
+    if (isPlaying === false) {
+      playSlideshow();
+      play.textContent = 'Pause';
+      isPlaying = true;
+    } else {
+      clearTimeout(timeoutId);
+      play.textContent = 'Play';
+      isPlaying = false;
+    }
   });
 }
