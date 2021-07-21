@@ -48,7 +48,11 @@
   // nextをクリックしたら次の画像に切り替わる処理
   const next = document.getElementById('next');
   next.addEventListener('click', () => {
-    const target = currentIndex + 1;
+    let target = currentIndex + 1;
+    // サムネイル画像の要素数を超えたらはじめに戻る処理
+    if (target === images.length) {
+      target = 0;
+    }
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
 }
