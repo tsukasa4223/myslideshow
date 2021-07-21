@@ -20,12 +20,17 @@
   mainImage.src = images[currentIndex];
 
   // サムネイル画像の設定
-  images.forEach(image => {
+  images.forEach((image, index) => {
     const img = document.createElement('img');
     img.src = image;
 
     // liの子要素としてimgを追加
     const li = document.createElement('li');
+    // 0番目のサムネイル画像にcurrentクラスをつける処理
+    if (index === currentIndex) {
+      li.classList.add('current');
+    }
+    
     li.appendChild(img);
     // thumbnailsクラスがついたulの子要素としてliを追加
     document.querySelector('.thumbnails').appendChild(li);
