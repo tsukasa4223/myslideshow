@@ -30,7 +30,11 @@
     if (index === currentIndex) {
       li.classList.add('current');
     }
-    
+    // サムネイルをクリックしたらメイン画像に反映される処理
+    li.addEventListener('click', () => {
+      mainImage.src = image;
+    });
+
     li.appendChild(img);
     // thumbnailsクラスがついたulの子要素としてliを追加
     document.querySelector('.thumbnails').appendChild(li);
