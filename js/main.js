@@ -44,4 +44,11 @@
     // thumbnailsクラスがついたulの子要素としてliを追加
     document.querySelector('.thumbnails').appendChild(li);
   });
+
+  // nextをクリックしたら次の画像に切り替わる処理
+  const next = document.getElementById('next');
+  next.addEventListener('click', () => {
+    const target = currentIndex + 1;
+    document.querySelectorAll('.thumbnails > li')[target].click();
+  });
 }
