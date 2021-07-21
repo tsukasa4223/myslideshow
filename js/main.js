@@ -33,6 +33,11 @@
     // サムネイルをクリックしたらメイン画像に反映される処理
     li.addEventListener('click', () => {
       mainImage.src = image;
+      // currentクラスの移動
+      const thumbnails = document.querySelectorAll('.thumbnails > li');
+      thumbnails[currentIndex].classList.remove('current');
+      currentIndex = index;
+      thumbnails[currentIndex].classList.add('current');
     });
 
     li.appendChild(img);
